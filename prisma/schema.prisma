@@ -1,0 +1,157 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Get a free hosted Postgres database in seconds: `npx create-db`
+
+generator client {
+  provider = "prisma-client"
+  output   = "../generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+enum Role {
+  USER
+  ADMIN
+}
+
+enum RequestStatus {
+  PENDING_REVIEW
+  QUOTED
+  CONFIRMED
+  COMPLETED
+  CANCELLED
+}
+
+// ============================
+// 👤 USERS & ADMINS
+// ============================
+
+model User {
+  id            String    @id @default(cuid())
+  name          String?
+  email         String    @unique
+  password      String?   // 🔥 فقط للأدمن
+  image         String?
+  role          Role      @default(USER)
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+
+  accounts      Account[] // 🔥 Google OAuth
+  requests      Request[]
+}
+
+model Account {
+  id                String  @id @default(cuid())
+  userId            String
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String? @db.Text
+  access_token      String? @db.Text
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String? @db.Text
+  session_state     String?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+}
+
+// ============================
+// 🏢 BUSINESS LOGIC
+// ============================
+
+model Branch {
+  id        String   @id @default(cuid())
+  name      String
+  address   String
+  createdAt DateTime @default(now())
+
+  requests  Request[]
+  slots     AvailableSlot[]
+}
+
+model Service {
+  id          String    @id @default(cuid())
+  name        String
+  description String
+  basePrice   Float
+  isActive    Boolean   @default(true)
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+
+  requests    RequestService[]
+}
+
+model AvailableSlot {
+  id        String   @id @default(cuid())
+  date      DateTime
+  isBooked  Boolean  @default(false)
+  branchId  String
+
+  branch    Branch   @relation(fields: [branchId], references: [id], onDelete: Cascade)
+  requests  Request[]
+
+  createdAt DateTime @default(now())
+
+  @@index([branchId, date])
+}
+
+// ============================
+// 🚗 REQUEST SYSTEM
+// ============================
+
+model Request {
+  id            String   @id @default(cuid())
+  userId        String
+  branchId      String
+  slotId        String?
+
+  // snapshot data
+  customerName  String
+  phoneNumber   String
+  address       String
+  carMake       String
+  carModel      String
+  carYear       Int
+  notes         String?
+
+  status        RequestStatus @default(PENDING_REVIEW)
+
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  user          User           @relation(fields: [userId], references: [id])
+  branch        Branch         @relation(fields: [branchId], references: [id])
+  slot          AvailableSlot? @relation(fields: [slotId], references: [id])
+
+  services      RequestService[]
+  quote         Quote?
+}
+
+model RequestService {
+  id         String   @id @default(cuid())
+  requestId  String
+  serviceId  String
+
+  request Request @relation(fields: [requestId], references: [id], onDelete: Cascade)
+  service Service @relation(fields: [serviceId], references: [id])
+
+  @@unique([requestId, serviceId])
+}
+
+model Quote {
+  id           String   @id @default(cuid())
+  requestId    String   @unique
+  price        Float
+  durationDays Int
+  notes        String?
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  request Request @relation(fields: [requestId], references: [id], onDelete: Cascade)
+}
