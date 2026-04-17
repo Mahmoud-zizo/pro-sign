@@ -41,7 +41,7 @@ export default function Hero() {
               className={`fade-up flex items-center gap-2 mt-3 justify-center lg:justify-start ${inView ? "visible" : ""}`}
               style={{ transitionDelay: "0.08s" }}
             >
-              <span className="w-8 h-[2px] bg-red-500 rounded-full"></span>
+              <span className="w-8 h-0.5 bg-red-500 rounded-full"></span>
               <span className="text-red-500 font-extrabold uppercase tracking-wider text-sm sm:text-base">
                 Powered by 3M
               </span>
@@ -127,7 +127,7 @@ export default function Hero() {
               {/* ── Card 1 — top left ── */}
               <div
                 className="card absolute rounded-[18px] overflow-hidden bg-white
-                  shadow-[0_8px_32px_rgba(0,0,0,0.13)] border border-black/[0.04] z-10"
+                  shadow-[0_8px_32px_rgba(0,0,0,0.13)] border border-black/4 z-10"
                 style={{ top: "2%", left: "0%", width: "36%" }}
               >
                 {/* Image from public folder */}
@@ -143,7 +143,7 @@ export default function Hero() {
               {/* ── Card 2 — top right (tallest, image-only) ── */}
               <div
                 className="card absolute rounded-[18px] overflow-hidden bg-white
-                  shadow-[0_8px_32px_rgba(0,0,0,0.10)] border border-black/[0.04] z-10"
+                  shadow-[0_8px_32px_rgba(0,0,0,0.10)] border border-black/4 z-10"
                 style={{ top: "0%", right: "0%", width: "36%" }}
               >
                 <Image
@@ -157,7 +157,7 @@ export default function Hero() {
               {/* Floating pill — above card 2 */}
               <div
                 className="absolute bg-white rounded-[10px] shadow-[0_4px_16px_rgba(0,0,0,0.12)]
-                  border border-black/[0.06] z-20 whitespace-nowrap px-2.5 py-1.5"
+                  border border-black/6 z-20 whitespace-nowrap px-2.5 py-1.5"
                 style={{ top: "1%", right: "38%" }}
               >
                 <p className="text-[10px] font-semibold text-[#0f1117]">
@@ -168,7 +168,7 @@ export default function Hero() {
               {/* ── Card 3 — bottom center ── */}
               <div
                 className="card absolute rounded-[18px] overflow-hidden bg-white
-                  shadow-[0_8px_32px_rgba(0,0,0,0.13)] border border-black/[0.04] z-10"
+                  shadow-[0_8px_32px_rgba(0,0,0,0.13)] border border-black/4 z-10"
                 style={{ bottom: "0%", left: "33%", width: "36%" }}
               >
                 <Image

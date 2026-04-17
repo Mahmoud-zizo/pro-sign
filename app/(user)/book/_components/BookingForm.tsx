@@ -93,7 +93,7 @@ export default function BookingForm({
   // ── success screen ──────────────────────────────────────────────────────────
   if (submitted) {
     return (
-      <main className="min-h-screen relative flex items-center justify-center p-4 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-teal-50 via-slate-50 to-indigo-100 overflow-hidden font-sans">
+      <main className="min-h-screen relative flex items-center justify-center p-4 bg-[radial-gradient(ellipse_at_top,var(--tw-gradient-stops))] from-teal-50 via-slate-50 to-indigo-100 overflow-hidden font-sans">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-150 sm:w-200 h-150 sm:h-200 bg-linear-to-tr from-teal-300/30 via-blue-300/20 to-purple-300/30 blur-[120px] rounded-full -z-10 pointer-events-none" />
 
         <div className="max-w-md w-full text-center space-y-6 bg-white/90 backdrop-blur-xl p-10 rounded-[2.5rem] shadow-2xl shadow-indigo-900/5 border border-slate-100">
@@ -134,7 +134,7 @@ export default function BookingForm({
 
   // ── form ────────────────────────────────────────────────────────────────────
   return (
-    <main className="min-h-screen relative py-12 px-4 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-indigo-100 via-slate-50 to-teal-100 overflow-hidden flex flex-col items-center justify-center font-sans">
+    <main className="min-h-screen relative py-12 px-4 bg-[radial-gradient(ellipse_at_top_right,var(--tw-gradient-stops))] from-indigo-100 via-slate-50 to-teal-100 overflow-hidden flex flex-col items-center justify-center font-sans">
       {/* Abstract background blurs */}
       <div className="fixed top-[-10%] right-[-5%] w-125 sm:w-200 h-125 sm:h-200 bg-teal-300/30 blur-[140px] rounded-full -z-10 pointer-events-none" />
       <div className="fixed bottom-[-10%] left-[-5%] w-125 sm:w-200 h-125 sm:h-200 bg-indigo-300/30 blur-[140px] rounded-full -z-10 pointer-events-none" />

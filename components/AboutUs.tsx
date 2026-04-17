@@ -71,8 +71,8 @@ export default function AboutUs() {
         </div>
 
         {/* Right Column (Video Box) */}
-        <div className="flex-1 w-full max-w-[500px] xl:max-w-none mx-auto order-1 xl:order-2">
-          <div className="bg-[#e2e8f0]/40 rounded-[2rem] p-3 sm:p-4 flex flex-col gap-4 aspect-square md:aspect-[4/3] shadow-inner">
+        <div className="flex-1 w-full max-w-125 xl:max-w-none mx-auto order-1 xl:order-2">
+          <div className="bg-[#e2e8f0]/40 rounded-[2rem] p-3 sm:p-4 flex flex-col gap-4 aspect-square md:aspect-4/3 shadow-inner">
             <div className="bg-white rounded-[1.5rem] flex-1 w-full relative overflow-hidden group shadow-sm flex items-center justify-center">
               {/* ProSign Brand Reel or Action Video */}
               <video

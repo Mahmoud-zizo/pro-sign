@@ -28,7 +28,7 @@ export const bookingSchema = z.object({
     .min(1, "Car model is required")
     .max(50, "Max 50 characters"),
   carYear: z
-    .number({ invalid_type_error: "Year must be a number" })
+    .number()
     .int("Year must be a whole number")
     .min(1980, "Year must be 1980 or later")
     .max(new Date().getFullYear() + 1, "Year cannot be in the future"),

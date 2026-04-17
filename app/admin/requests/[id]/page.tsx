@@ -70,7 +70,7 @@ function Row({ label, value }: { label: string; value: string }) {
       <span className="text-[13px] font-semibold text-slate-400 uppercase tracking-wide shrink-0 pt-0.5">
         {label}
       </span>
-      <span className="text-[14px] font-medium text-white text-right break-words text-center">
+      <span className="text-[14px] font-medium text-white text-right wrap-break-words ">
         {value || "—"}
       </span>
     </div>

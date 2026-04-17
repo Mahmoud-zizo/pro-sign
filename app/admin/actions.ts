@@ -117,13 +117,8 @@ export async function getAdminRequestDetail(
 // ─── createQuote ──────────────────────────────────────────────────────────────
 
 const quoteSchema = z.object({
-  price: z
-    .number({ invalid_type_error: "Price must be a number" })
-    .positive("Price must be positive"),
-  durationDays: z
-    .number({ invalid_type_error: "Duration must be a number" })
-    .int()
-    .positive("Duration must be at least 1 day"),
+  price: z.number().positive("Price must be positive"),
+  durationDays: z.number().int().positive("Duration must be at least 1 day"),
   notes: z.string().max(500).optional(),
 });
 

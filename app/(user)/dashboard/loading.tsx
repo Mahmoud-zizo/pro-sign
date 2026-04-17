@@ -57,12 +57,14 @@ export default function UserLoading() {
             <div className="flex flex-col">
               {/* Table header */}
               <div className="hidden md:grid grid-cols-[2fr_1.5fr_1fr_1.5fr_1fr] gap-4 px-6 py-4 bg-slate-50/80 border-b border-slate-200">
-                {["Vehicle", "Date", "Status", "Details", "Actions"].map((col) => (
-                  <div
-                    key={col}
-                    className="h-4 w-16 rounded-lg bg-slate-200 animate-pulse"
-                  />
-                ))}
+                {["Vehicle", "Date", "Status", "Details", "Actions"].map(
+                  (col) => (
+                    <div
+                      key={col}
+                      className="h-4 w-16 rounded-lg bg-slate-200 animate-pulse"
+                    />
+                  ),
+                )}
               </div>
 
               {/* Table rows */}
@@ -77,7 +79,7 @@ export default function UserLoading() {
                     {/* Vehicle */}
                     <div className="flex items-center gap-4 min-w-0 w-full">
                       <div className="w-10 h-10 rounded-full bg-slate-200 animate-pulse shrink-0 border border-slate-100" />
-                      <div className="flex flex-col gap-1.5 flex-1 max-w-[200px]">
+                      <div className="flex flex-col gap-1.5 flex-1 max-w-50">
                         <div className="w-full h-4 rounded-md bg-slate-200 animate-pulse" />
                         <div className="w-2/3 h-3 rounded-md bg-slate-200 animate-pulse" />
                       </div>

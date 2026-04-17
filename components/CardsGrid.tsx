@@ -64,7 +64,7 @@ function Card({ card, index }: { card: (typeof CARDS)[0]; index: number }) {
 
       {/* Dark Overlay - Subtle red tint on hover for app identity */}
       <div className="absolute inset-0 bg-black/40 transition-colors duration-500 group-hover:bg-red-950/40" />
-      <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-90 transition-opacity duration-500 group-hover:opacity-100" />
+      <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/20 to-transparent opacity-90 transition-opacity duration-500 group-hover:opacity-100" />
 
       {/* Content */}
       <div className="absolute inset-0 p-8 flex flex-col justify-center items-center text-center">
@@ -102,7 +102,7 @@ export default function CardsGrid() {
         className="mb-12"
       />{" "}
       <div className="max-w-7xl mx-auto px-6 pb-24 lg:pb-32 pt-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 auto-rows-fr min-h-[800px] md:h-[650px]">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 auto-rows-fr min-h-200 md:h-162.5">
           {CARDS.map((card, i) => (
             <Card key={card.id} card={card} index={i} />
           ))}

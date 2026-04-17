@@ -447,7 +447,7 @@ export default async function UserDashboardPage({
                         <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider mb-1 md:hidden">
                           Services
                         </span>
-                        <p className="text-[13px] text-slate-700 font-medium truncate max-w-full md:max-w-[200px]">
+                        <p className="text-[13px] text-slate-700 font-medium truncate max-w-full md:max-w-50">
                           {req.services.map((s) => s.service.name).join(", ")}
                         </p>
                         {req.quote && (
