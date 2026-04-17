@@ -10,7 +10,7 @@ import type { NextRequest } from "next/server";
 const USER_ROUTES = ["/dashboard", "/book", "/requests"];
 const ADMIN_ROUTES = ["/admin"];
 
-export async function middleware(req: NextRequest) {
+export async function proxy(req: NextRequest) {
   const { pathname } = req.nextUrl;
 
   const isUserRoute = USER_ROUTES.some((r) => pathname.startsWith(r));
