@@ -16,7 +16,7 @@ const WhyUs = () => {
             </div>
 
             <Image
-              src="/images/hero2.jpg"
+              src="/images/copra.jpg"
               alt="dashboard"
               width={170}
               height={170}
@@ -52,7 +52,7 @@ const WhyUs = () => {
             </div>
 
             <Image
-              src="/images/hero3.jpg"
+              src="/images/lotus.jpg"
               alt="dashboard"
               width={180}
               height={180}

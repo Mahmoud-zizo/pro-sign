@@ -132,7 +132,7 @@ export default function Hero() {
               >
                 {/* Image from public folder */}
                 <Image
-                  src="/images/hero.jpg"
+                  src="/images/copra.jpg"
                   alt="Ahmed Karim"
                   width={300}
                   height={300}
@@ -147,7 +147,7 @@ export default function Hero() {
                 style={{ top: "0%", right: "0%", width: "36%" }}
               >
                 <Image
-                  src="/images/hero2.jpg"
+                  src="/images/gray.jpg"
                   alt="Ahmed Karim"
                   width={300}
                   height={300}
@@ -161,7 +161,7 @@ export default function Hero() {
                 style={{ top: "1%", right: "38%" }}
               >
                 <p className="text-[10px] font-semibold text-[#0f1117]">
-                  Full Coverage
+                  Full Protection
                 </p>
               </div>
 
@@ -172,7 +172,7 @@ export default function Hero() {
                 style={{ bottom: "0%", left: "33%", width: "36%" }}
               >
                 <Image
-                  src="/images/hero3.jpg"
+                  src="/images/class.jpg"
                   alt="Ahmed Karim"
                   width={300}
                   height={300}
