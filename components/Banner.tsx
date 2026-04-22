@@ -16,7 +16,7 @@ export default function CtaBanner() {
         <div className="pointer-events-none absolute -bottom-28 -left-16 h-75 w-75 rounded-full bg-white/8 blur-2xl" />
 
         <p className="relative z-10 text-center text-2xl font-bold leading-relaxed tracking-wide text-white sm:text-2xl">
-          Protect your investment with premium 3M solutions.{" "}
+          Protect it before it&apos;s too late{" "}
         </p>
 
         <Link href={"/book"}>
@@ -30,7 +30,7 @@ export default function CtaBanner() {
             hover:bg-purple-600 hover:text-white
           "
           >
-            Book An Apointment
+            Book An Appointment
           </button>
         </Link>
       </div>

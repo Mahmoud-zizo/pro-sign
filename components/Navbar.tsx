@@ -6,7 +6,7 @@ import { signOut } from "next-auth/react";
 import type { Session } from "next-auth";
 
 const NAV_LINKS = [
-  { name: "Home", href: "#" },
+  { name: "Home", href: "#hero" },
   { name: "About us", href: "#about-us" },
   { name: "Services", href: "#services" },
   { name: "Contact us", href: "#footer" },

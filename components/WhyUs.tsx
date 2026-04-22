@@ -28,7 +28,7 @@ const WhyUs = () => {
         {/* 🟣 SMALL RIGHT CARD */}
         <WobbleCard containerClassName="bg-gradient-to-br from-indigo-500 to-purple-600 rounded-[20px]  h-60 md:h-80">
           <div className="text-white">
-            <h3 className="text-xl text-center font-bold mb-2">
+            <h3 className="text-3xl text-center font-bold mb-2">
               Up to 10 Years Warranty
             </h3>
             <p className="text-white/80 font-semibold text-center">

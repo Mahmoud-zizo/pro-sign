@@ -9,6 +9,7 @@ export default function Hero() {
   return (
     <>
       <section
+        id="hero"
         ref={ref as React.RefObject<HTMLElement>}
         className="relative overflow-hidden "
       >

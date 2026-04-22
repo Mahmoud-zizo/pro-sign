@@ -3,7 +3,7 @@
 import { useState, Suspense } from "react";
 import { signIn } from "next-auth/react";
 import { useSearchParams, useRouter } from "next/navigation";
-
+import Image from "next/image";
 // ─── /login page ──────────────────────────────────────────────────────────────
 // Google sign-in for users + credentials form for admins.
 
@@ -68,26 +68,14 @@ function LoginContent() {
 
       <div className="w-full max-w-sm">
         {/* Logo */}
-        <div className="text-center mb-8">
-          <div
-            className="mx-auto w-14 h-14 bg-linear-to-br from-teal-500 to-blue-600 rounded-2xl
-            flex items-center justify-center shadow-lg shadow-teal-500/25 mb-4"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="w-7 h-7 text-white"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path d="M19 17H5a2 2 0 01-2-2V9a2 2 0 012-2h1l2-3h8l2 3h1a2 2 0 012 2v6a2 2 0 01-2 2z" />
-              <circle cx="8.5" cy="14.5" r="1.5" />
-              <circle cx="15.5" cy="14.5" r="1.5" />
-            </svg>
-          </div>
+        <div className="text-center mb-8 flex flex-col items-center gap-3">
+          <Image
+            src="/images/logo2.jpg"
+            alt="logo"
+            width={80}
+            height={80}
+            className="rounded-[15px] object-cover"
+          />
           <h1 className="text-2xl font-bold text-slate-800 tracking-tight">
             Welcome back
           </h1>

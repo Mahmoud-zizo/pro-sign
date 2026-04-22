@@ -109,18 +109,6 @@ export default function AboutUs() {
                 <span>Watch Process</span>
               </div>
             </div>
-
-            <div className="flex items-center justify-between px-3 pt-1 pb-1">
-              <span className="font-medium text-[15px] text-gray-800 tracking-tight">
-                ProSign Studio Showreel
-              </span>
-              <div className="flex items-center gap-0.5 opacity-40">
-                <div className="w-1 h-2 bg-red-500 rounded-full"></div>
-                <div className="w-1 h-3 bg-red-500 rounded-full"></div>
-                <div className="w-1 h-4 bg-red-500 rounded-full"></div>
-                <div className="w-1 h-2 bg-red-500 rounded-full"></div>
-              </div>
-            </div>
           </div>
         </div>
       </div>
