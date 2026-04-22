@@ -3,7 +3,7 @@ import Image from "next/image";
 import { Phone, MapPin } from "lucide-react";
 
 const navLinks = [
-  { label: "Home", href: "/" },
+  { label: "Home", href: "#hero" },
   { label: "About us", href: "#about" },
   { label: "Services", href: "#services" },
   { label: "Contact", href: "/contact" },
