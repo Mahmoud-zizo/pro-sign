@@ -8,12 +8,12 @@ import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 const CARDS = [
   {
-    id: 1,
-    title: "PPF",
+    id: 3,
+    title: "Window Tinting",
     description:
-      "Shield your car's paint from chips, scratches, and road debris with our ultra-durable PPF.",
-    icon: "⚡",
-    image: "/images/ppf.jpg",
+      "Reduce heat, block UV rays, and enhance privacy with premium window tint films that balance performance and style.",
+    icon: "🌐",
+    image: "/images/window.jpg",
   },
   {
     id: 2,
@@ -24,12 +24,12 @@ const CARDS = [
     image: "/images/nano.jpg",
   },
   {
-    id: 3,
-    title: "Window Tinting",
+    id: 1,
+    title: "PPF",
     description:
-      "Reduce heat, block UV rays, and enhance privacy with premium window tint films that balance performance and style.",
-    icon: "🌐",
-    image: "/images/window.jpg",
+      "Shield your car's paint from chips, scratches, and road debris with our ultra-durable PPF.",
+    icon: "⚡",
+    image: "/images/ppf.jpg",
   },
 ];
 
@@ -42,14 +42,6 @@ function Card({ card, index }: { card: (typeof CARDS)[0]; index: number }) {
 
   return (
     <motion.div
-      initial={{ opacity: 0, scale: 0.95 }}
-      whileInView={{ opacity: 1, scale: 1 }}
-      viewport={{ once: true, amount: 0.2 }}
-      transition={{
-        duration: 0.6,
-        delay: index * 0.15,
-        ease: [0.25, 0.1, 0.25, 1],
-      }}
       className={`relative w-full h-full overflow-hidden rounded-[2rem] group cursor-pointer border border-black/5 shadow-[0_10px_30px_rgba(0,0,0,0.08)] hover:shadow-2xl transition-all duration-500
         ${isTall ? "md:row-span-2 md:col-start-2 md:row-start-1" : ""}
       `}
