@@ -63,7 +63,7 @@ export default function Hero() {
               style={{ transitionDelay: "0.2s" }}
             >
               <Link
-                href=""
+                href="/login"
                 className="inline-flex items-center bg-red-500 text-white text-sm font-semibold
                   px-6 py-3 rounded-full no-underline
                   shadow-[0_2px_12px_rgba(0,0,0,0.2)]
@@ -72,7 +72,7 @@ export default function Hero() {
                 Book Now
               </Link>
               <Link
-                href=""
+                href="#services"
                 className="inline-flex items-center bg-white text-[#0f1117] text-sm font-semibold
                   px-6 py-3 rounded-full no-underline border border-black/10
                   transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_4px_14px_rgba(0,0,0,0.08)]"
