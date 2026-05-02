@@ -4,14 +4,14 @@ import { ShieldCheck, BadgeCheck, Sparkles, Handshake } from "lucide-react";
 
 export const ABOUT_CARDS = [
   {
-    title: "Driven by Protection",
-    desc: "At PRO SIGN, we focus on preserving every detail of your vehicle using industry-leading solutions.",
-    icon: ShieldCheck,
-  },
-  {
     title: "Certified Expertise",
     desc: "As a 3M Authorized Center, we apply trusted technologies with precision and care.",
     icon: BadgeCheck,
+  },
+  {
+    title: "Driven by Protection",
+    desc: "At PRO SIGN, we focus on preserving every detail of your vehicle using industry-leading solutions.",
+    icon: ShieldCheck,
   },
   {
     title: "Advanced Solutions",
